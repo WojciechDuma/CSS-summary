@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+        integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: red;
+            font-size: 10px;
+        }
+
+        div {
+            font-weight: bold;
+            font-family: arial;
+            margin: 20px;
+        }
+
+        div.item1 {
+            font-size: 2em;
+        }
+
+        div.item2,
+        div.item3,
+        div.item4,
+        div.item5 {
+            display: none;
+        }
+
+        @media(min-width:360px) {
+            body {
+                background-color: green;
+            }
+
+            div.item2 {
+                display: block;
+                font-size: 2.2em;
+            }
+
+            div.item1 {
+                display: none;
+            }
+        }
+
+        @media(min-width:640px) {
+            body {
+                background-color: blue;
+            }
+
+            div.item3 {
+                display: block;
+                font-size: 2.6em;
+            }
+
+            div.item2 {
+                display: none;
+            }
+        }
+
+        @media(min-width:1024px) {
+            body {
+                background-color: grey;
+            }
+
+            div.item4 {
+                display: block;
+                font-size: 3em;
+            }
+
+            div.item3 {
+                display: none;
+            }
+        }
+
+        @media(min-width:1400px) {
+            body {
+                background-color: black;
+            }
+
+            div.item5 {
+                display: block;
+                font-size: 4em;
+                color: white
+            }
+
+            div.item4 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item1">Ekran ma do 359px i kolor red.</div>
+    <div class="item2">Ekran ma od 360px do 639px i kolor green.</div>
+    <div class="item3">Ekran ma od 640px do 1023px i kolor blue.</div>
+    <div class="item4">Ekran ma od 1024px do 1400px i kolor grey.</div>
+    <div class="item5">Ekran ma od 1400px i kolor black.</div>
+
+</body>
+
+</html>
