@@ -32,7 +32,7 @@
 
         span {
             color: royalblue;
-            font-size: 1.2em;
+            font-size: 1.1em;
             font-weight: bold;
         }
 
@@ -62,372 +62,372 @@
 <body>
     <h2>CSS knowledge summary:</h2>
 
+
+    <h3>Spis treści:</h3>
+    <ul>
+        <li><a href="#combinators">Combinators</a></li>
+        <li><a href="#colors">Colors</a></li>
+        <li><a href="#units">Units</a></li>
+        <li><a href="#fonts">Fonts</a></li>
+        <li><a href="#boxModel">Box Model</a></li>
+        <li><a href="#pseudo">Pseudo-class, pseudo-elements</a></li>
+        <li><a href="#position">Position</a></li>
+        <li><a href="#background">Background</a></li>
+        <li><a href="#filter">Filter</a></li>
+        <li><a href="#responsive">Responsive</a></li>
+        <li><a href="#animation">Animation</a></li>
+        <li><a href="#calc">Calc, variable</a></li>
+        <li><a href="#flexbox">Flexbox</a></li>
+        <li><a href="#bem">BEM</a></li>
+        <li><a href="#sass">Sass / SCSS</a></li>
+        <li><a href="#other">Other</a></li>
+    </ul>
+
     <section>
-        <h4>Spis treści:</h3>
-            <ul>
-                <li><a href="#combinators">Combinators</a></li>
-                <li><a href="#colors">Colors</a></li>
-                <li><a href="#units">Units</a></li>
-                <li><a href="#fonts">Fonts</a></li>
-                <li><a href="#boxModel">Box Model</a></li>
-                <li><a href="#pseudo">Pseudo-class, pseudo-elements</a></li>
-                <li><a href="#position">Position</a></li>
-                <li><a href="#background">Background</a></li>
-                <li><a href="#filter">Filter</a></li>
-                <li><a href="#responsive">Responsive</a></li>
-                <li><a href="#animation">Animation</a></li>
-                <li><a href="#calc">Calc, variable</a></li>
-                <li><a href="#flexbox">Flexbox</a></li>
-                <li><a href="#bem">BEM</a></li>
-                <li><a href="#sass">Sass / SCSS</a></li>
-                <li><a href="#other">Other</a></li>
-            </ul>
+        <h3 id="combinators">Combinators:</h3>
+        <pre>
+        1.Potomek: <span>'spacja'</span>   np.: h1 p {} (wszystkie p które są w h1);
+        2.Dziecko: <span>></span>  np.: h1 > p {} (wszystkie p które są bezpośrednio po h1)
+        3.Pierwszy młodszy brat: <span>+</span>    np.: h1 + p {} (pierwsze p które jest po h1);
+        4.Każdy młodszy brat: <span>~</span>   np.: h1 ~ p {} (wszystkie p które są po h1);
+        5.Selektor uniwersalny: <span>*</span>  wybiera wszystkie elementy.
 
-            <h3 id="combinators">Combinators:</h3>
-            <pre>
-            1.Potomek: <span>'spacja'</span>   np.: h1 p {} (wszystkie p które są w h1);
-            2.Dziecko: <span>></span>  np.: h1 > p {} (wszystkie p które są bezpośrednio po h1)
-            3.Pierwszy młodszy brat: <span>+</span>    np.: h1 + p {} (pierwsze p które jest po h1);
-            4.Każdy młodszy brat: <span>~</span>   np.: h1 ~ p {} (wszystkie p które są po h1);
-            5.Selektor uniwersalny: <span>*</span>  wybiera wszystkie elementy.
-
-            ---------------------------------------
-            Wszystkie dzieci selectora:
-            selector > * {}         np. header > * {}
-
+        ---------------------------------------
+        Wszystkie dzieci selectora:
+        selector > * {}         np. header > * {}
         </pre>
     </section>
 
     <section>
         <h3 id="colors">Colors:</h3>
         <pre>
-            <span>#rrggbb</span>
+        <span>#rrggbb</span>
 
-            <span>rgb(red, green, blue);</span>
-            rgb(0, 0, 0) - rgb(255, 255, 255) - rgb(100%, 100%, 100%);
+        <span>rgb(red, green, blue);</span>
+        rgb(0, 0, 0) - rgb(255, 255, 255) - rgb(100%, 100%, 100%);
 
-            <span>rgba(red, gree, blue, alpha);</span>
-            rgba(255, 255, 255, 0.0 - 1.0);
+        <span>rgba(red, gree, blue, alpha);</span>
+        rgba(255, 255, 255, 0.0 - 1.0);
 
-            <span>hsl(hue, saturation, lightness);</span>
-            hsl(0-360, 0%-100%, 0%-100%);
+        <span>hsl(hue, saturation, lightness);</span>
+        hsl(0-360, 0%-100%, 0%-100%);
 
-            <span>hsla(hue, saturation, lightness, alpha);</span>
-            hsl(0-360, 0%-100%, 0%-100%, 0.0 - 1.0);
+        <span>hsla(hue, saturation, lightness, alpha);</span>
+        hsl(0-360, 0%-100%, 0%-100%, 0.0 - 1.0);
         </pre>
     </section>
 
     <section>
         <h3 id="units">Units:</h3>
         <pre>
-            <span>em</span> - jednostka która dziedziczy wartość po rodzicu;
-                Rekomendowana do użycia w font-size;
-                np. jeżeli div ma font-size: 20px, a p font-size: 0.5em - to ma 10px;
+        <span>em</span> - jednostka która dziedziczy wartość po rodzicu;
+            Rekomendowana do użycia w font-size;
+            np. jeżeli div ma font-size: 20px, a p font-size: 0.5em - to ma 10px;
 
-            <span>rem</span> - jednostka która dziedziczy po html (domyślnie 16px);
+        <span>rem</span> - jednostka która dziedziczy po html (domyślnie 16px);
 
-            <span>%</span> - jednoskta odnosi się do wielkości rodzica;
-                Dobra do tworzenia responsywnych układów;
-                np. jeżeli rodzic ma 10px to gdy zastosujemy 150% dla elementu to będzię mieć 15px;
+        <span>%</span> - jednoskta odnosi się do wielkości rodzica;
+            Dobra do tworzenia responsywnych układów;
+            np. jeżeli rodzic ma 10px to gdy zastosujemy 150% dla elementu to będzię mieć 15px;
 
-            <span>px</span> - używamy gdy potrzebujemy dokładnych, precyzyjnych wielkości
-                np. border, box-shadow
+        <span>px</span> - używamy gdy potrzebujemy dokładnych, precyzyjnych wielkości
+            np. border, box-shadow
 
-            <span>vw</span> - odnosi się do szerokości okna, 100vw - 100% szerokości przeglądarki;
-            <span>vh</span> - odnosi się do wysokości okna, 100vh - 100% wysokości przeglądarki;
+        <span>vw</span> - odnosi się do szerokości okna, 100vw - 100% szerokości przeglądarki;
+        <span>vh</span> - odnosi się do wysokości okna, 100vh - 100% wysokości przeglądarki;
         </pre>
     </section>
 
     <section>
         <h3 id="fonts">Fonts:</h3>
         <pre>
-            Fonty bezszeryfowe:
-            <span>font-family</span>: arial, verdana, tahoma, sans-serif;
-            Najlepiej dodać w html lub body, aby reszta elementów dziedziczyła.
+        Fonty bezszeryfowe:
+        <span>font-family</span>: arial, verdana, tahoma, sans-serif;
+        Najlepiej dodać w html lub body, aby reszta elementów dziedziczyła.
 
-            <span>font-size</span>: najlepiej z 'em' lub 'rem', wartość dziedziczona;
+        <span>font-size</span>: najlepiej z 'em' lub 'rem', wartość dziedziczona;
 
-            <span>font-style</span>: normal / italic;
+        <span>font-style</span>: normal / italic;
 
-            <span>font-weight</span>: bold / 100-900 / bolder / lighter;
+        <span>font-weight</span>: bold / 100-900 / bolder / lighter;
 
-            <span>letter-spacing</span>: odstępny między literami;
+        <span>letter-spacing</span>: odstępny między literami;
 
-            <span>word-spacing</span>: odstęmy między wyrazami;
+        <span>word-spacing</span>: odstęmy między wyrazami;
 
-            <span>text-decoration</span>: underline / overline / line-through / none;
-            
-            <span>text-indent</span>: wcięcia tekstu;
+        <span>text-decoration</span>: underline / overline / line-through / none;
+        
+        <span>text-indent</span>: wcięcia tekstu;
 
-            <span>text-align</span>: left / right / center / justify;
+        <span>text-align</span>: left / right / center / justify;
 
-            <span>text-transform</span>: uppercase / lowercase / capitalize;
+        <span>text-transform</span>: uppercase / lowercase / capitalize;
 
-            <span>text-shadow</span>: h-shadow v-hadow blur color;
+        <span>text-shadow</span>: h-shadow v-hadow blur color;
 
-            <span>line-height</span>: wysokość wiersza. Gdy font-size: 20px, a line-height: 40px
-                         to nad i pod wierszem będzie (40 - 20)/ 2 = 10px;
-                         line-height: 1.5; - półtora razy wielkość fontu.
-            
-            <span>vertical-align</span>: baseline (domyślnie) / sub / super;
+        <span>line-height</span>: wysokość wiersza. Gdy font-size: 20px, a line-height: 40px
+                        to nad i pod wierszem będzie (40 - 20)/ 2 = 10px;
+                        line-height: 1.5; - półtora razy wielkość fontu.
+        
+        <span>vertical-align</span>: baseline (domyślnie) / sub / super;
         </pre>
     </section>
 
     <section>
         <h3 id="boxModel">Box Model:</h3>
         <pre>
-            <span>box-sizing: content-box;</span>
-            - wartość domyślna
-            - width i height określają tylko przestrzeń content elementu
+        <span>box-sizing: content-box;</span>
+        - wartość domyślna
+        - width i height określają tylko przestrzeń content elementu
 
-            <span>box-sizing: border-box;</span>
-            - width i height obejmują content, padding oraz border elementu
-            - zmiana padding i border nie zmienia width i height
-            - nie obejmuje to margin
+        <span>box-sizing: border-box;</span>
+        - width i height obejmują content, padding oraz border elementu
+        - zmiana padding i border nie zmienia width i height
+        - nie obejmuje to margin
         </pre>
     </section>
 
     <section>
         <h3 id="pseudo">Pseudo-class, pseudo-elements:</h3>
         <pre>
-            :hover
-            :focus
-            :first-child
-            :last-child
-            :only-child
-            :first-of-type
-            :last-of-type
-            :only-of-type
-            :nth-child(n, odd, even, 2n+1...)
-            :nth-last-child(n, odd, even, 2n+1...)
-            :nth-of-type(n, odd, even, 2n+1...)
+        :hover
+        :focus
+        :first-child
+        :last-child
+        :only-child
+        :first-of-type
+        :last-of-type
+        :only-of-type
+        :nth-child(n, odd, even, 2n+1...)
+        :nth-last-child(n, odd, even, 2n+1...)
+        :nth-of-type(n, odd, even, 2n+1...)
 
-            ::before
-            ::after
-            ::first-letter
-            ::first-line
-            ::selection
+        ::before
+        ::after
+        ::first-letter
+        ::first-line
+        ::selection
         </pre>
     </section>
 
     <section>
         <h3 id="position">Position:</h3>
         <pre>
-            <span>position: static;</span>
-            - wartość domyślna;
-            - top-bottom, left-right nie działają z position static;
+        <span>position: static;</span>
+        - wartość domyślna;
+        - top-bottom, left-right nie działają z position static;
 
-            <span>position: fixed;</span>
-            - width i height - domyślnie: auto;
-            - o wysokości elemetu decyduje albo height albo top-bottom (nie stosować razem!);
-            - o szerokości elementu decyduje albo width albo left-right (nie stosować razem!);
-            - elementy liniowe stają się automatycznie blokowe;
+        <span>position: fixed;</span>
+        - width i height - domyślnie: auto;
+        - o wysokości elemetu decyduje albo height albo top-bottom (nie stosować razem!);
+        - o szerokości elementu decyduje albo width albo left-right (nie stosować razem!);
+        - elementy liniowe stają się automatycznie blokowe;
 
-            <span>position: absolute;</span>
-            - domyślnie element pozycjonowany jest względem okna przeglądarki;
-            - jeżeli damy na rodzica position: relative; możemy pozycjonować względem rodzica;
-            - pozostałem właściwości podobnie jak w position: fixed;
-            - element nie jest "przyklejony" do okna przeglądarki;
+        <span>position: absolute;</span>
+        - domyślnie element pozycjonowany jest względem okna przeglądarki;
+        - jeżeli damy na rodzica position: relative; możemy pozycjonować względem rodzica;
+        - pozostałem właściwości podobnie jak w position: fixed;
+        - element nie jest "przyklejony" do okna przeglądarki;
 
-            <span>position: relative;</span>
-            - w przeciwieństwie do fixed i absolute, nie wyrywa elementu ze struktury;
-            - właściwość nadajemy na rodzica dzięki czemu mamy pełną kontrole nad pozycją dziecka;
+        <span>position: relative;</span>
+        - w przeciwieństwie do fixed i absolute, nie wyrywa elementu ze struktury;
+        - właściwość nadajemy na rodzica dzięki czemu mamy pełną kontrole nad pozycją dziecka;
         </pre>
     </section>
 
     <section>
         <h3 id="background">Background:</h3>
         <pre>
-            <span>background-color: color;</span>
+        <span>background-color: color;</span>
 
-            <span>background-image: url('name.jpg');</span>
-           
-            <span>background-repeat: repeat;</span>
-            - repeat; - wartość domyślna;
-            - repeat-y;
-            - repeat-x;
-            - no-repeat;
+        <span>background-image: url('name.jpg');</span>
+        
+        <span>background-repeat: repeat;</span>
+        - repeat; - wartość domyślna;
+        - repeat-y;
+        - repeat-x;
+        - no-repeat;
 
-            <span>background-position: ośX ośY;</span>
-            - center center;
-            - 50% 50%;
-            - top 0% left 0%;
+        <span>background-position: ośX ośY;</span>
+        - center center;
+        - 50% 50%;
+        - top 0% left 0%;
 
-            <span>background-size: width height;</span>
-            - 100% auto; - rozszerz po szerokości i zachowaj proporcje (auto);
-            - contain; - cała grafika ma się pojawić, nie będzie rozciągana;
-            - cover; - zajmuje całe tło, ucina jak najmniej, grafika nie będzie rozciągnięta
+        <span>background-size: width height;</span>
+        - 100% auto; - rozszerz po szerokości i zachowaj proporcje (auto);
+        - contain; - cała grafika ma się pojawić, nie będzie rozciągana;
+        - cover; - zajmuje całe tło, ucina jak najmniej, grafika nie będzie rozciągnięta
 
-            <span>background-attachment: scroll;</span>
-            - scroll; - wartość domyślna;
-            - fixed; - przymocowanie do okna przeglądarki;
+        <span>background-attachment: scroll;</span>
+        - scroll; - wartość domyślna;
+        - fixed; - przymocowanie do okna przeglądarki;
 
-            <span>background-origin: padding-box;</span>
-            - padding-box; - wartość domyślna;
-            - content-box;
-            - border-box;
-            - dotyczy skąd ma się rysować grafika;
+        <span>background-origin: padding-box;</span>
+        - padding-box; - wartość domyślna;
+        - content-box;
+        - border-box;
+        - dotyczy skąd ma się rysować grafika;
 
-            <span>background-clip: border-box;</span>
-            - border-box; - wartość domyślna;
-            - content-box;
-            - border-box;
-            - dotyczy przestrzeni na grafikę;
+        <span>background-clip: border-box;</span>
+        - border-box; - wartość domyślna;
+        - content-box;
+        - border-box;
+        - dotyczy przestrzeni na grafikę;
 
-            <span>background-blend-mode: normal;</span>
-            - normal; - wartość domyślna;
-            - multiply, screen, overlay, darken, lighten,
-              color-dodge, color-burn, hard-light, soft-light, 
-              difference, exclusion, hue, saturation, color, luminosity;
+        <span>background-blend-mode: normal;</span>
+        - normal; - wartość domyślna;
+        - multiply, screen, overlay, darken, lighten,
+            color-dodge, color-burn, hard-light, soft-light, 
+            difference, exclusion, hue, saturation, color, luminosity;
         </pre>
     </section>
 
     <section>
         <h3 id="filter">Filter:</h3>
         <pre>
-            filter: blur(3px);
-            filter: brightness(10%);
-            filter: contrast(2);
-            filter: grayscale(100%);
-            filter: opacity(50%);
-            filter: hue-rotate(30deg);
-            filter: sepia(60%);
-            filter: ivert(100%);
-            filter: saturate(2);
+        filter: blur(3px);
+        filter: brightness(10%);
+        filter: contrast(2);
+        filter: grayscale(100%);
+        filter: opacity(50%);
+        filter: hue-rotate(30deg);
+        filter: sepia(60%);
+        filter: ivert(100%);
+        filter: saturate(2);
         </pre>
     </section>
 
     <section>
         <h3 id="responsive">Responsive:</h3>
         <pre>
-            1. Obowiązkowy meta viewport:
-            <span>meta name="viewport" content="width=device-width, initial-scale=1.0"</span>
+        1. Obowiązkowy meta viewport:
+        <span>meta name="viewport" content="width=device-width, initial-scale=1.0"</span>
 
-            2. Używamy wartości procentowych(względnych): % vh vw;
+        2. Używamy wartości procentowych(względnych): % vh vw;
 
-            3. @Media Queries:
-                <span>@media (warunek) {}</span>
-                max-width
-                min-width
-                portrait
-                landscape
+        3. @Media Queries:
+            <span>@media (warunek) {}</span>
+            max-width
+            min-width
+            portrait
+            landscape
 
-            4. Mobile first:
-                - zaczynamy od wartości początkowych a potem nadpisujemy
-                - @media(min-width: 360px){}
-                - @media(min-width: 640px){}
-                - @media(min-width: 768px){}
-                - @media(min-width: 1024px){}
-                - @media(min-width: 1440px){}
+        4. Mobile first:
+            - zaczynamy od wartości początkowych a potem nadpisujemy
+            - @media(min-width: 360px){}
+            - @media(min-width: 640px){}
+            - @media(min-width: 768px){}
+            - @media(min-width: 1024px){}
+            - @media(min-width: 1440px){}
 
-            4. Desktop first:
-                - zaczynamy od wartości początkowych a potem nadpisujemy
-                - @media(max-width: 1440px){}
-                - @media(max-width: 1024px){}
-                - @media(max-width: 768px){}
-                - @media(max-width: 640px){}
-                - @media(max-width: 360px){}
+        4. Desktop first:
+            - zaczynamy od wartości początkowych a potem nadpisujemy
+            - @media(max-width: 1440px){}
+            - @media(max-width: 1024px){}
+            - @media(max-width: 768px){}
+            - @media(max-width: 640px){}
+            - @media(max-width: 360px){}
         </pre>
     </section>
 
     <section>
         <h3 id="animation">Animation:</h3>
         <pre>
-            <span>Transition:</span>
+        <span>Transition:</span>
 
-            transition: all 0s ease; - wartości domyślne
-            transition-property: właściwość lub all;
-            transition-duration: sekudy;
-            transition-timing-function: ease / ease-in / ease-out / linear / cubic-beziere / steps();
-            np. transition: width 1s linear;
+        transition: all 0s ease; - wartości domyślne
+        transition-property: właściwość lub all;
+        transition-duration: sekudy;
+        transition-timing-function: ease / ease-in / ease-out / linear / cubic-beziere / steps();
+        np. transition: width 1s linear;
 
-            <span>Transform:</span>
+        <span>Transform:</span>
 
-            transform: rotate(stopnie);
-            transform-origin: 50% 50%; - wartość domyślna
-            transform: translateX(n) translateY(m); lub transform: translate(n, m);
-            transform: scaleX(n) scaleY(m); lub transform: scale(n, m);
+        transform: rotate(stopnie);
+        transform-origin: 50% 50%; - wartość domyślna
+        transform: translateX(n) translateY(m); lub transform: translate(n, m);
+        transform: scaleX(n) scaleY(m); lub transform: scale(n, m);
 
-            <span>Animation:</span>
+        <span>Animation:</span>
 
-            @keyframes nazwaAnimacji {
-                0% {}
-                100% {}
-            }
+        @keyframes nazwaAnimacji {
+            0% {}
+            100% {}
+        }
 
-            animation-name: nazwaAnimacji;
-            animation-duration: sekundy;
-            animation-delay: sekundy; //domyślnie: 0;
-            animation-direction: normal / alternate / reverse / alternate-reverse;
-            animation-iteration-count: n / infinite; //domyślnie: 1;
-            animation-fill-mode: none / both / forwards / backwards;
-                none - wartości z animacji nie są wykorzystywane przed ani po animacji;
-                both - element przyjmuje wartości z animacji przed i po animacji;
-                forwards - po animacji element zostaje w miejscu zakończenia animacji;
-                backwards - przed animacją element jest w miejscu rozpoczęcia animacji.
-            animation-timing-function: ease / linear ...
-            animation-play-state: runing / paused;
+        animation-name: nazwaAnimacji;
+        animation-duration: sekundy;
+        animation-delay: sekundy; //domyślnie: 0;
+        animation-direction: normal / alternate / reverse / alternate-reverse;
+        animation-iteration-count: n / infinite; //domyślnie: 1;
+        animation-fill-mode: none / both / forwards / backwards;
+            none - wartości z animacji nie są wykorzystywane przed ani po animacji;
+            both - element przyjmuje wartości z animacji przed i po animacji;
+            forwards - po animacji element zostaje w miejscu zakończenia animacji;
+            backwards - przed animacją element jest w miejscu rozpoczęcia animacji.
+        animation-timing-function: ease / linear ...
+        animation-play-state: runing / paused;
         </pre>
     </section>
 
     <section>
         <h3 id="calc">Calc, variable</h3>
         <pre>
-            <span>calc(expression)</span> Expression: + - * /
-            np. calc(100vh - 200px); calc(100% / 5 - 20px);
+        <span>calc(expression)</span> Expression: + - * /
+        np. calc(100vh - 200px); calc(100% / 5 - 20px);
 
-            <span>var(name , value)</span>
-            name - nazwa właściwości
-            value - wartość domyślna gdy nasze name jest nieprawidłowe
-            użycie: 
-            html {
-                --name: blue;
-            }
-            p {
-                color: var(--name);
-            }
+        <span>var(name , value)</span>
+        name - nazwa właściwości
+        value - wartość domyślna gdy nasze name jest nieprawidłowe
+        użycie: 
+        html {
+            --name: blue;
+        }
+        p {
+            color: var(--name);
+        }
         </pre>
     </section>
 
     <section>
         <h3 id="flexbox">Flexbox:</h3>
         <pre>
-            <span>display: flex;</span>      // wszystkie dzieci stają się elastyczne
+        <span>display: flex;</span>      // wszystkie dzieci stają się elastyczne
 
-            Ustawienia domyślne:
-                flex-direction: row;            //elementy ustawiają się obok siebie w poziomie
-                justify-content: flex-start;    // od lewej strony
-                flex-basis: auto;               // zajmują tyle miejsca ile potrzebują
-                align-items: stretch;           // na 100% wysokości rodzica
-                flex-wrap: nowrap;              // wszystkie mieszczą się w jendej linii
-                flex-shrink: 1;                 // zmniejszają się w tej samej proporcji
+        Ustawienia domyślne:
+            flex-direction: row;            //elementy ustawiają się obok siebie w poziomie
+            justify-content: flex-start;    // od lewej strony
+            flex-basis: auto;               // zajmują tyle miejsca ile potrzebują
+            align-items: stretch;           // na 100% wysokości rodzica
+            flex-wrap: nowrap;              // wszystkie mieszczą się w jendej linii
+            flex-shrink: 1;                 // zmniejszają się w tej samej proporcji
 
-            Właściwości nadawane rodzicom: 
+        Właściwości nadawane rodzicom: 
 
-            <span>flex-direction</span>: row / column / row-reverse / column-reverse;
-            <span>flex-wrap</span>: nowrap / wrap;
-            <span>justify-content</span>: flex-start / flex-end / center / space-around / space-between;
-                justify-content --> określa zachowanie równoległe do osi głównej.
-            <span>align-items</span>: stretch / flex-start / flex-end / center / baseline;
-                align-items --> określa zachowanie prostopoadłe do osi głównej.
-            <span>align-content</span>: flex-start / flex-end / center / space-around / space-between;
-                align-content --> domyślnie jest stretch. Używamy gdy mamy więcej niż jedną linie 
-                z elementami - możemy tworzyć sposób zachowania między nimi.
+        <span>flex-direction</span>: row / column / row-reverse / column-reverse;
+        <span>flex-wrap</span>: nowrap / wrap;
+        <span>justify-content</span>: flex-start / flex-end / center / space-around / space-between;
+            justify-content --> określa zachowanie równoległe do osi głównej.
+        <span>align-items</span>: stretch / flex-start / flex-end / center / baseline;
+            align-items --> określa zachowanie prostopoadłe do osi głównej.
+        <span>align-content</span>: flex-start / flex-end / center / space-around / space-between;
+            align-content --> domyślnie jest stretch. Używamy gdy mamy więcej niż jedną linie 
+            z elementami - możemy tworzyć sposób zachowania między nimi.
 
-            Właściwości nadawane elementom:
+        Właściwości nadawane elementom:
 
-            <span>flex: grow</span>: 0;
-                flex-grow --> domyślnie 0, wolne miejsce nie jest rozdzielane.
-                Jeśli tylko jeden elemnt otrzyma flex-grow: 1, to zajmie on całe wolne miejsce.
-            <span>flex: shrink</span>: 1;
-                flex: shrink --> elementy zmniejszają się w takiej samej proporcji.
-            <span>flex: basis</span>: auto;
-                flex-basis --> zachowuje się podobnie jak width (przy row) lub height (przy column),
-                czyli jest albo wysokością albo szerkością w zależności od osi głównej.
-            <span>align-self</span>:  stretch / flex-start / flex-end / center / baseline;
-                align-self --> to samo co align-items ale dla pojedynczego elementu.
-            <span>order</span>: 0;
-                order --> domyślnie 0, pozwala na zmiane domyślnego rozmieszczenia elementów.
+        <span>flex: grow</span>: 0;
+            flex-grow --> domyślnie 0, wolne miejsce nie jest rozdzielane.
+            Jeśli tylko jeden elemnt otrzyma flex-grow: 1, to zajmie on całe wolne miejsce.
+        <span>flex: shrink</span>: 1;
+            flex: shrink --> elementy zmniejszają się w takiej samej proporcji.
+        <span>flex: basis</span>: auto;
+            flex-basis --> zachowuje się podobnie jak width (przy row) lub height (przy column),
+            czyli jest albo wysokością albo szerkością w zależności od osi głównej.
+        <span>align-self</span>:  stretch / flex-start / flex-end / center / baseline;
+            align-self --> to samo co align-items ale dla pojedynczego elementu.
+        <span>order</span>: 0;
+            order --> domyślnie 0, pozwala na zmiane domyślnego rozmieszczenia elementów.
         </pre>
     </section>
 
@@ -447,138 +447,404 @@
         <span>Modifier</span> - niestandardowy blok elementu rozszerzony lub zmieniony, 
         nie wystepuje samodzielnie: disabled, visited, niestandardowy kolor buttona
         np.: nav>ul>li class="main-menu__vertical-list--disabled"
-    
+
         Zasady ogólne:
         - bez identyfikatorów,
         - bez znaczników i tagów,
         - bez złożonych selektorów,
         - bez znaczników i selektorów razem,
         - bez zagnieżdżeń klas, chyba że są niezbędne
-      </pre>
+        </pre>
     </section>
 
     <section>
         <h3 id="sass">Sass/SCSS</h3>
         <pre>
         Zagnieżdżenia:
-        <span>
-        header {
-            height: 100vh;
-            h1 {
-                font-size: 2rem;
-                span {
-                    color: white;
+            header {
+                height: 100vh;
+                h1 {
+                    font-size: 2rem;
+                    span {
+                        color: white;
+                    }
+                }
+                h2 {
+                    font-size: 1.5rem;
                 }
             }
-            h2 {
-                font-size: 1.5rem;
-            }
-        }
-        </span>
         <span>&</span> - ampersand symbolizuje selektor rodzica
 
+        _____________________________________
         Zmienne:
         <span>$nazwa-zmiennej: właściwość;</span>
         <span>!global</span> - zmienna staje się globalna
-            article{
+        
+            article {
                 $color-text: #121212 !global;
             }
-
+        
+        _____________________________________
+        Typy wartości:
+        - string np: $font: "open sans";
+        - number np: 
+            <span class="lineThrough">$size1: 20 + px;</span>
+            <span>$size2: 20 * 1px;</span>
+            p {
+                <span class="lineThrough">width: $size1 + 20px;   // po kompilacji: 20px20px</span>
+                <span>width: $size2 + 20px;   // po kompilacji: 40px</span>
+            }
+        - kolor np: #333, rgba(), red
+            <span>$color: rgb(20, 20, 20)</span>
+            <span>color: $color + 12;   // po kompilacji: color: rgb(32, 32, 32);</span>
+        - lista np:
+            $colors: #333, rgb(10, 10, 10), #000;
+            $shadow: 2px 3px 2px 2px #ccc;
+            $sizes: 1000px, 800px, 600px;
+            listę można wykorzystać w pętli Sass
+        -mapa np:
+            $fonts: (
+                main: 'arial',
+                second: 'verdana',
+                third: 'roboto'
+            );
+            map-get($nazwa-mapy, nazwa-klucza);
+            p {
+               font-family: map-get($fonts, second); // po kompilacji: font-family: verdana;
+            }
+        
+        _____________________________________
+        Komentarze:
+        <span>/* */</span> - wielowierszowe, widoczne po kompilacji (bez pliku skompresowanego)
+        <span>//</span> - jednowierszowy, nie widoczne po kompilacji
+        <span>/*! */</span> - wielowierszowe, widoczne po kompilacji do formatu skompresowanego
+        
+        _____________________________________
+        Dzielenie i łączenie plików:
         <span>@import 'nazwaPliku';</span> - import plików cząstkowych
+        main.scss - plik główny
+        _button.scss, _fonts.scss, itd... - pliki cząstkowe (na początku podkreślnik)
+        
+        _____________________________________
+        Domieszki:
+        <span>@mixin nazwa-domieszki { ... }</span> - tworzenie
+        <span>@include nazwa-domieszki</span> - użycie wersja z parametrem:
+        <span>@mixin nazwa-domieszki($parametr) { ... }</span> - tworzenie
+        <span>@include nazwa-domieszki(argument)</span> - użycie
+            użycie podstawowe np:
+            @mixin text {
+                font-family: 'arial';
+                color: black;
+                font-size: 2rem;
+            }
+
+            .article {
+                text-align: justify;
+                @include text;
+            }
+
+            p {
+                border: 2px solid black;
+                @include text;
+            }
+
+            użycie zaawansowane np:
+            @mixin position($type, $top, $right, $bottom, $left) {
+                position: $type;
+                top: $top;
+                right: $right;
+                bottom: $bottom;
+                left: $left;
+            }
+
+            .section {
+                backround-color: blue;
+                @include position(absolute, auto, 200px, 3rem, auto)
+            }
+
+            użycie z selektorem np:
+            @mixin box {
+                div {
+                    width: 10vh;
+                    height: 10vh;
+                    border: 2px solid black;
+                }
+            }
+        <span>@content</span> - dodatkowe właściwości np:
+            @mixin title($size: 2rem) {
+                font-size: $size;
+                @content;
+            }
+
+            p {
+                @include title(2.5rem) {
+                    color: black;
+                    line-height: 2rem;
+                }
+            }
+        _____________________________________
+        Rozszerzenie - 'dziedziczenie':
+        <span>@extend</span>
+            np:
+            .text {
+                font-size: 20px;
+                font-family: Arial;
+                color: black;
+            }
+
+            .article__text {
+                @extend .text;
+            }
+
+            .footer__copyright {
+                @extend .text;
+                font-size: 25px;
+            }
+
+            po kompilacji wygląda tak:
+            .text, .article__text, .footer__copyright {
+                font-size: 20px;
+                font-family: Arial;
+                color: black;
+            }
+            .footer__copyright {
+                font-size: 25px;
+            }
+        <span>%selektor-zastepczy{ ... }</span>
+        Selektor zastępszy (inaczej placeholder, cicha klasa), nie jest kompilowany,
+        tworzy wirtualną regułę, do której można dodawać kolejne elementy przez @extend. 
+            np: 
+            %flex-list {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+
+            div {
+                @extend %flex-list;
+                color: black;
+                font-size: 20px;
+            }
+        _____________________________________
+        Interpolacja:
+        <span>#{$zmienna}</span> np:
+            $default-size: 10px;
+            $large-font: 'xxl';
+
+            p.#{$large-font} {
+                font-size: default-size * 2;
+            }
+
+            po kompilacji:
+            p.xxl {
+                font-size: 20px;
+            }
+        _____________________________________
+        Funkcje kolorów:
+        <span>lighten(color, 0-100%)</span>
+        <span>darken(color, 0-100%)</span>
+        <span>mix(color_1, color_2)</span>
+            np:
+            $font-color: blue;
+            p {
+                background-color: darken($font-color, 30%);
+                color: lighten($font-color, 25%);
+                color: mix(green, blue);
+            }
+        
+        _____________________________________
+        Własne funkcje:
+        <span>
+        @function nazwa-funkcji( $parametr1, ..., $parametrN){
+            ...
+            @return zwracana-wartość;
+        };
+
+        p {
+            nazwa-właściwości: nazwa-funkcji();
+        }
+        </span>
+            np:
+            $main-width: 20px;
+            @function big-width(){
+                return 10 * $main-width;
+            }
+            button {
+                width: big-width();
+            }
+            po kompilacji:
+            button {
+                width: 200px;
+            }
+        
+        _____________________________________
+        Instrukcje warunkowe:
+        <span>@if{} @else if{} @else{}</span>
+        <span>and</span> - logiczne "i"
+        <span>or</span> - logiczne "lub"
+            np:
+            $div-width: 190px;
+
+            div {
+                @if ($div-width &lt 200){
+                    background-color: blue;
+                }
+                color: black;
+            }
+            
+            $box-width: null;
+            p {
+                @if($box-width) {
+                    border-color: red;
+                }
+                @else if ($box-width and $box-width > 200px) {
+                    border-color: green;
+                }
+                @else {
+                    border-color: black;
+                }
+            }
+        _____________________________________
+        Responsywność np:
+
+            $breakpoints: (
+                xsmall: (min-width: 460px),
+                small: (min-width: 640px),
+                medium: (min-width: 800px),
+                large: (min-width: 1024px),
+                xlarge: (min-width: 1200px),
+                xxlarge: (min-width: 1440px)
+            );
+
+            @mixin mediaQuery($breakpoint) {
+                $size: map-get($breakpoints, $breakpoint);
+                @if($size){
+                    @media #{$size} {
+                        @content;
+                    }
+                }
+                @else {
+                    @error '"#{$breakpoint}" - nie rozpoznaje wielkości';
+                }
+            }
+
+            użycie:
+            div {
+                h3 {
+                    font-size: 1.5em;
+                    @include mediaQuery(medium){
+                        font-size: 2em;
+                    }
+                }
+            }
+
+            po kompilacji:
+
+            div h3 {
+                font-size: 1.5em;
+            }
+
+            @media (min-width: 800px){
+                div h3 {
+                    font-size: 2em;
+                }
+            }
       </pre>
     </section>
 
     <section>
         <h3 id="other">Others:</h3>
         <pre>
-            Kaskadowość - to zasady, które określają w jaki sposób przeglądatka wybiera
-                          właściwość CSS dla danego elementu. Część elementów jest dziedziczona.
-                          Element dziedziczy po rodzicu.
-                          
-            ###########################################
+        Kaskadowość - to zasady, które określają w jaki sposób przeglądarka wybiera
+                      właściwość CSS dla danego elementu. Część elementów jest dziedziczona.
+                      Element dziedziczy po rodzicu.
+                        
+        ###########################################
 
-            Reset:
+        Reset:
 
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-            ###########################################
-                 
-            Wyśrodkoweanie w pionie:
+        ###########################################
+                
+        Wyśrodkoweanie w pionie:
 
-            div {
-                height: 50px;
-                line-height: 50px;
-            }
+        div {
+            height: 50px;
+            line-height: 50px;
+        }
 
-            ###########################################
+        ###########################################
 
-            Wyśrodkowanie elementu w pionie i poziomie:
+        Wyśrodkowanie elementu w pionie i poziomie:
 
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-            ###########################################
+        ###########################################
 
-            Wyśrodkowanie elementu w pionie i poziomie:
+        Wyśrodkowanie elementu w pionie i poziomie:
 
-            display: flex;
-            align-itmes: center;
-            justify-content: center;
+        display: flex;
+        align-itmes: center;
+        justify-content: center;
 
-            ###########################################
+        ###########################################
 
-            Odbicie lustrzane:
+        Odbicie lustrzane:
 
-            transform: scaleX(-1);
+        transform: scaleX(-1);
 
-            ###########################################
+        ###########################################
 
-            Rozwiązanie problemu z odstępem w inline-block:
+        Rozwiązanie problemu z odstępem w inline-block:
 
-            nav {
-                font-size: 0;
-            }
+        nav {
+            font-size: 0;
+        }
 
-            nav a {
-                display: inline-block;
-                font-size: 20px; (nadać jaki się chce)
-            }
-            wyzerowanie rozmiaru fontu w rodzicu usunie odstęp między elementami
+        nav a {
+            display: inline-block;
+            font-size: 20px; (nadać jaki się chce)
+        }
+        wyzerowanie rozmiaru fontu w rodzicu usunie odstęp między elementami
 
-            ###########################################
+        ###########################################
 
-            Rozwiązanie problemu z float:
+        Rozwiązanie problemu z float:
 
-            1. na rodzica dajemy klasę .clearfix
+        1. na rodzica dajemy klasę .clearfix
 
-            .clearfix::after {
-                content: "";
-                display: block;
-                clear: both;
-            }
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
 
-            2. na dzieci możemy dawać float - nie będzie rozwalać się układ
+        2. na dzieci możemy dawać float - nie będzie rozwalać się układ
 
-            ###########################################
+        ###########################################
 
-            Wyśrodkowanie zdjęcia w ramce: 
+        Wyśrodkowanie zdjęcia w ramce: 
 
-            background-size: cover;
-            background-position: center;
+        background-size: cover;
+        background-position: center;
 
-            ###########################################
+        ###########################################
 
-            Trójkąt w css:
+        Trójkąt w css:
 
-            border-bottom: 300px solid red;
-            border-left: 200px solid transparent;
-            border-right: 200px solid transparent;
+        border-bottom: 300px solid red;
+        border-left: 200px solid transparent;
+        border-right: 200px solid transparent;
       </pre>
     </section>
 </body>
