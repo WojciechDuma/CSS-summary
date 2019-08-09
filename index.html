@@ -845,6 +845,33 @@
         border-bottom: 300px solid red;
         border-left: 200px solid transparent;
         border-right: 200px solid transparent;
+
+        ###########################################
+
+        Przeniesienie ostatniego elementy li do prawej strony:
+
+        li:nth-last-child(1){
+            margin-left: auto;
+        }
+
+        ###########################################
+
+        Counter:
+        <span>counter-reset: nazwaCountera;</span> - polecenie umieszczamy w kontenerze
+        <span>counter-increment: nazwaCountera;</span> - polecenie umieszczamy w selektorze
+        <span>content: counter(nazwaCountera);</span> - polecenie umieszczamy w selektorze
+        
+        
+        .container {
+            counter-reset: nazwaCountera; 
+            p {
+                code...
+                &::after {
+                    counter-increment: nazwaCountera;
+                    content: counter(nazwaCountera);
+                }
+            }
+        }
       </pre>
     </section>
 </body>
