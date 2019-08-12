@@ -1,91 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>CSS - knowledge summary</title>
 
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
+      html {
+        scroll-behavior: smooth;
+      }
 
-        body {
-            max-width: 80%;
-            margin: auto;
-            background-color: #434343;
-            color: #efefef;
-            font-size: 20px;
-            font-family: roboto, arial, sans-serif;
-        }
+      body {
+        max-width: 80%;
+        margin: auto;
+        background-color: #434343;
+        color: #efefef;
+        font-size: 20px;
+        font-family: roboto, arial, sans-serif;
+      }
 
-        pre {
-            min-width: 1000px;
-            padding-top: 20px;
-            border-radius: 10px;
-            background-color: #f5f5f5;
-            color: black;
-            font-size: 0.9em;
-        }
+      pre {
+        min-width: 1000px;
+        padding-top: 20px;
+        border-radius: 10px;
+        background-color: #f5f5f5;
+        color: black;
+        font-size: 0.9em;
+      }
 
-        span {
-            color: royalblue;
-            font-size: 1.1em;
-            font-weight: bold;
-        }
+      span {
+        color: royalblue;
+        font-size: 1.1em;
+        font-weight: bold;
+      }
 
-        .lineThrough {
-            text-decoration: line-through;
-            color: goldenrod;
-            font-size: 1em;
-        }
+      .lineThrough {
+        text-decoration: line-through;
+        color: goldenrod;
+        font-size: 1em;
+      }
 
-        h4 {
-            color: chocolate;
-            font-style: italic;
-        }
+      h4 {
+        color: chocolate;
+        font-style: italic;
+      }
 
-        a {
-            text-decoration: none;
-            color: white;
-            transition: 0.3s;
-        }
+      a {
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+      }
 
-        a:hover {
-            color: royalblue;
-        }
+      a:hover {
+        color: royalblue;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h2>CSS knowledge summary:</h2>
-
 
     <h3>Spis treści:</h3>
     <ul>
-        <li><a href="#combinators">Combinators</a></li>
-        <li><a href="#colors">Colors</a></li>
-        <li><a href="#units">Units</a></li>
-        <li><a href="#fonts">Fonts</a></li>
-        <li><a href="#boxModel">Box Model</a></li>
-        <li><a href="#pseudo">Pseudo-class, pseudo-elements</a></li>
-        <li><a href="#position">Position</a></li>
-        <li><a href="#background">Background</a></li>
-        <li><a href="#filter">Filter</a></li>
-        <li><a href="#responsive">Responsive</a></li>
-        <li><a href="#animation">Animation</a></li>
-        <li><a href="#calc">Calc, variable</a></li>
-        <li><a href="#flexbox">Flexbox</a></li>
-        <li><a href="#bem">BEM</a></li>
-        <li><a href="#sass">Sass / SCSS</a></li>
-        <li><a href="#other">Other</a></li>
+      <li><a href="#combinators">Combinators</a></li>
+      <li><a href="#colors">Colors</a></li>
+      <li><a href="#units">Units</a></li>
+      <li><a href="#fonts">Fonts</a></li>
+      <li><a href="#boxModel">Box Model</a></li>
+      <li><a href="#pseudo">Pseudo-class, pseudo-elements</a></li>
+      <li><a href="#position">Position</a></li>
+      <li><a href="#background">Background</a></li>
+      <li><a href="#filter">Filter</a></li>
+      <li><a href="#responsive">Responsive</a></li>
+      <li><a href="#animation">Animation</a></li>
+      <li><a href="#calc">Calc, variable</a></li>
+      <li><a href="#flexbox">Flexbox</a></li>
+      <li><a href="#grid">Grid</a></li>
+      <li><a href="#bem">BEM</a></li>
+      <li><a href="#sass">Sass / SCSS</a></li>
+      <li><a href="#other">Other</a></li>
     </ul>
 
     <section>
-        <h3 id="combinators">Combinators:</h3>
-        <pre>
+      <h3 id="combinators">Combinators:</h3>
+      <pre>
         1.Potomek: <span>'spacja'</span>   np.: h1 p {} (wszystkie p które są w h1);
         2.Dziecko: <span>></span>  np.: h1 > p {} (wszystkie p które są bezpośrednio po h1)
         3.Pierwszy młodszy brat: <span>+</span>    np.: h1 + p {} (pierwsze p które jest po h1);
@@ -95,12 +94,13 @@
         ---------------------------------------
         Wszystkie dzieci selectora:
         selector > * {}         np. header > * {}
-        </pre>
+        </pre
+      >
     </section>
 
     <section>
-        <h3 id="colors">Colors:</h3>
-        <pre>
+      <h3 id="colors">Colors:</h3>
+      <pre>
         <span>#rrggbb</span>
 
         <span>rgb(red, green, blue);</span>
@@ -118,8 +118,8 @@
     </section>
 
     <section>
-        <h3 id="units">Units:</h3>
-        <pre>
+      <h3 id="units">Units:</h3>
+      <pre>
         <span>em</span> - jednostka która dziedziczy wartość po rodzicu;
             Rekomendowana do użycia w font-size;
             np. jeżeli div ma font-size: 20px, a p font-size: 0.5em - to ma 10px;
@@ -135,12 +135,13 @@
 
         <span>vw</span> - odnosi się do szerokości okna, 100vw - 100% szerokości przeglądarki;
         <span>vh</span> - odnosi się do wysokości okna, 100vh - 100% wysokości przeglądarki;
-        </pre>
+        </pre
+      >
     </section>
 
     <section>
-        <h3 id="fonts">Fonts:</h3>
-        <pre>
+      <h3 id="fonts">Fonts:</h3>
+      <pre>
         Fonty bezszeryfowe:
         <span>font-family</span>: arial, verdana, tahoma, sans-serif;
         Najlepiej dodać w html lub body, aby reszta elementów dziedziczyła.
@@ -170,12 +171,13 @@
                         line-height: 1.5; - półtora razy wielkość fontu.
         
         <span>vertical-align</span>: baseline (domyślnie) / sub / super;
-        </pre>
+        </pre
+      >
     </section>
 
     <section>
-        <h3 id="boxModel">Box Model:</h3>
-        <pre>
+      <h3 id="boxModel">Box Model:</h3>
+      <pre>
         <span>box-sizing: content-box;</span>
         - wartość domyślna
         - width i height określają tylko przestrzeń content elementu
@@ -188,8 +190,8 @@
     </section>
 
     <section>
-        <h3 id="pseudo">Pseudo-class, pseudo-elements:</h3>
-        <pre>
+      <h3 id="pseudo">Pseudo-class, pseudo-elements:</h3>
+      <pre>
         :hover
         :focus
         :first-child
@@ -207,12 +209,13 @@
         ::first-letter
         ::first-line
         ::selection
-        </pre>
+        </pre
+      >
     </section>
 
     <section>
-        <h3 id="position">Position:</h3>
-        <pre>
+      <h3 id="position">Position:</h3>
+      <pre>
         <span>position: static;</span>
         - wartość domyślna;
         - top-bottom, left-right nie działają z position static;
@@ -236,8 +239,8 @@
     </section>
 
     <section>
-        <h3 id="background">Background:</h3>
-        <pre>
+      <h3 id="background">Background:</h3>
+      <pre>
         <span>background-color: color;</span>
 
         <span>background-image: url('name.jpg');</span>
@@ -283,8 +286,8 @@
     </section>
 
     <section>
-        <h3 id="filter">Filter:</h3>
-        <pre>
+      <h3 id="filter">Filter:</h3>
+      <pre>
         filter: blur(3px);
         filter: brightness(10%);
         filter: contrast(2);
@@ -294,12 +297,13 @@
         filter: sepia(60%);
         filter: ivert(100%);
         filter: saturate(2);
-        </pre>
+        </pre
+      >
     </section>
 
     <section>
-        <h3 id="responsive">Responsive:</h3>
-        <pre>
+      <h3 id="responsive">Responsive:</h3>
+      <pre>
         1. Obowiązkowy meta viewport:
         <span>meta name="viewport" content="width=device-width, initial-scale=1.0"</span>
 
@@ -331,8 +335,8 @@
     </section>
 
     <section>
-        <h3 id="animation">Animation:</h3>
-        <pre>
+      <h3 id="animation">Animation:</h3>
+      <pre>
         <span>Transition:</span>
 
         transition: all 0s ease; - wartości domyślne
@@ -367,12 +371,13 @@
             backwards - przed animacją element jest w miejscu rozpoczęcia animacji.
         animation-timing-function: ease / linear ...
         animation-play-state: runing / paused;
-        </pre>
+        </pre
+      >
     </section>
 
     <section>
-        <h3 id="calc">Calc, variable</h3>
-        <pre>
+      <h3 id="calc">Calc, variable</h3>
+      <pre>
         <span>calc(expression)</span> Expression: + - * /
         np. calc(100vh - 200px); calc(100% / 5 - 20px);
 
@@ -390,8 +395,8 @@
     </section>
 
     <section>
-        <h3 id="flexbox">Flexbox:</h3>
-        <pre>
+      <h3 id="flexbox">Flexbox:</h3>
+      <pre>
         <span>display: flex;</span>      // wszystkie dzieci stają się elastyczne
 
         Ustawienia domyślne:
@@ -432,8 +437,52 @@
     </section>
 
     <section>
-        <h3 id="bem">BEM</h3>
-        <pre>
+      <h3 id="grid">Grid</h3>
+      <pre>
+        Kontener:
+        <span>display: grid;</span>
+        <span>grid-template-columns</span>: 100px 2fr auto;
+            Ilość podanych wartości odpowiada liczbie kolumn.
+        <span>grid-template-rows</span>: 100px 50px;
+            Ilość podanych wartości odpowiada liczbie wierszy.
+        <span>grid-template-areas</span>
+        <span>grid-auto-columns</span>
+            Domyślnie: grid-auto-column: auto; --> tyle ile potrzebuje element
+        <span>grid-auto-rows</span>
+            Domyślnie: grid-auto-rows: auto; --> tyle ile potrzebuje element
+        <span>grid-auto-flow</span>: row / column;
+            Domyślnie: grid-auto-flow: row; --> elementy są umieszczane w wierszach,
+            Element zapełnia cały wiersz, gdy brakuje miejsca tworzy nowy wiersz -->
+            jest to efekt domyślnego: grid-auto-rows: auto;
+        <span>column-gap</span>
+        <span>row-gap</span>
+        <span>gap</span>
+        <span>justify-items</span>
+        <span>align-items</span>
+        <span>place-items</span>
+        <span>justify-content</span>
+        <span>align-content</span>
+        <span>place-content</span>
+
+        Elementy:
+        <span>grid-column-start</span>
+        <span>grid-column-end</span>
+        <span>grid-column</span>
+        <span>grid-row-start</span>
+        <span>grid-row-end</span>
+        <span>grid-row</span>
+        <span>grid-area</span>
+        <span>justify-self</span>
+        <span>align-self</span>
+        <span>place-self</span>
+        <span>order</span>
+        <span>z-index</span>
+        </pre>
+    </section>
+
+    <section>
+      <h3 id="bem">BEM</h3>
+      <pre>
         <span>BLOCK__ELEMENT--MODIFIER</span>
 
         <span>Block</span> - komponenet, niezależny element interfejsu:
@@ -454,12 +503,13 @@
         - bez złożonych selektorów,
         - bez znaczników i selektorów razem,
         - bez zagnieżdżeń klas, chyba że są niezbędne
-        </pre>
+        </pre
+      >
     </section>
 
     <section>
-        <h3 id="sass">Sass/SCSS</h3>
-        <pre>
+      <h3 id="sass">Sass/SCSS</h3>
+      <pre>
         Zagnieżdżenia:
             header {
                 height: 100vh;
@@ -755,8 +805,8 @@
     </section>
 
     <section>
-        <h3 id="other">Others:</h3>
-        <pre>
+      <h3 id="other">Others:</h3>
+      <pre>
         Kaskadowość - to zasady, które określają w jaki sposób przeglądarka wybiera
                       właściwość CSS dla danego elementu. Część elementów jest dziedziczona.
                       Element dziedziczy po rodzicu.
@@ -874,6 +924,5 @@
         }
       </pre>
     </section>
-</body>
-
+  </body>
 </html>
