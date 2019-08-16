@@ -441,42 +441,98 @@
       <pre>
         Kontener:
         <span>display: grid;</span>
-        <span>grid-template-columns</span>: 100px 2fr auto;
-            Ilość podanych wartości odpowiada liczbie kolumn.
         <span>grid-template-rows</span>: 100px 50px;
+            W sposób jawny deklarujemy ilość wierszy i ich wielkość.
             Ilość podanych wartości odpowiada liczbie wierszy.
-        <span>grid-template-areas</span>
-        <span>grid-auto-columns</span>
-            Domyślnie: grid-auto-column: auto; --> tyle ile potrzebuje element
+        <span>grid-template-columns</span>: 100px 2fr auto;
+            W sposób jawny deklarujemy ilość kolumn i ich wielkość.
+            Ilość podanych wartości odpowiada liczbie kolumn.
+        <span>grid-template</span>: grid-template-rows / grid-template-columns;
+            Skrót zapisu, najpierw podajemy grid-template-rows, potem grid-template-columns;
+        <span>grid-template-areas</span>:
+            "nazwa_1 nazwa_2 nazwa_2"
+            "nazwa_3 nazwa_2 nazwa_2"
+            "nazwa_4 nazwa_4 nazwa_5";
+            Nazywanie komórek aby później je wykorzystać w elementach grid-area.
         <span>grid-auto-rows</span>
             Domyślnie: grid-auto-rows: auto; --> tyle ile potrzebuje element
+        <span>grid-auto-columns</span>
+            Domyślnie: grid-auto-column: auto; --> tyle ile potrzebuje element
         <span>grid-auto-flow</span>: row / column;
             Domyślnie: grid-auto-flow: row; --> elementy są umieszczane w wierszach,
             Element zapełnia cały wiersz, gdy brakuje miejsca tworzy nowy wiersz -->
             jest to efekt domyślnego: grid-auto-rows: auto;
-        <span>column-gap</span>
         <span>row-gap</span>
-        <span>gap</span>
-        <span>justify-items</span>
-        <span>align-items</span>
-        <span>place-items</span>
+            Tworzy przerwę między wierszami.
+        <span>column-gap</span>
+            Tworzy przerwe między kolumnami.
+        <span>gap</span>: row-gap column-gap;
+            Skrót zapisu, najpierw podajemy row-gap, a potem column-gap.
+        <span>justify-items</span>: stretch/left/right/center/start/end;
+            Zachowanie elementu wewnątrz komórki w poziomie, po szerokości.
+        <span>align-items</span>: stretch/start/end/center;
+            Zachowanie elementu wewnątrz komórki w pionie, po wysokości.
+        <span>place-items</span>: align-items justify-items;
+            Skrót zapisu, najpierw podajemy align-items, a potem justify-items;
+            place-items: center; - wyśrodkowanie.
         <span>justify-content</span>
+            stretch/left/right/center/start/end/space-between/space-around/space-evenly;
+            Domyślnie: stretch; 
+            Zachowanie po szerokości.
         <span>align-content</span>
-        <span>place-content</span>
+            Właściwości jak w justify-content aby bez left i right
+            Domyślnie: stretch;
+            Zachowanie po wysokości.
+        <span>place-content</span>: align-content justify-content;
+            Skrót zapisu, najpierw podajemy align-content, potem justify-content.
 
         Elementy:
-        <span>grid-column-start</span>
-        <span>grid-column-end</span>
-        <span>grid-column</span>
-        <span>grid-row-start</span>
-        <span>grid-row-end</span>
-        <span>grid-row</span>
-        <span>grid-area</span>
-        <span>justify-self</span>
-        <span>align-self</span>
-        <span>place-self</span>
-        <span>order</span>
-        <span>z-index</span>
+        <span>grid-row-start</span>: 2;
+            Wskazanie początkowej pozycji elementu w poziomie.
+        <span>grid-row-end</span>: 3;
+            Wskazanie końcowej pozycji elementu w poziomie.
+            grid-row: 2; to to samo co grid-row: 2/3; - domyślnie przeskakuje o jeden
+        <span>grid-row</span>: 2/3; - wersja skrócona.
+            Wskazanie początkowej i końcowej pozycji elementu w poziomie.
+            grid-row: 2; to to samo co grid-row: 2/3; - domyślnie przeskakuje o jeden.
+        <span>grid-column-start</span>: 1;
+            Wskazanie początkowej pozycji elementu w pionie.
+        <span>grid-column-end</span>: 3;
+            Wskazanie końcowej pozycji elementu w pionie.
+        <span>grid-column</span>: 1/3; - wersja skrócona.
+            Wskazanie początkowej i końcowej pozycji elementu w pionie.
+            grid-column: 2; to to samo co grid-column: 2/3; - domyślnie przeskakuje o jeden.
+            grid-column: 1/span 5; - od pierwszej linii rozciągaj się o 5 linii.
+        <span>grid-area</span>: 2/1/3/3;
+            Wartość zbiorcza: row-start/column-start/row-end/column-end;
+            Można wykorzystać nazwy umieszczone w grid-template-areas (bez cudzysłowia) np.
+            element1 { grid-area: nazwa_2; }
+        <span>justify-self</span>: stretch/left/right/center/start/end;
+            Zachowanie dla poszczególnego elementu w poziomie, po szerokości.
+        <span>align-self</span>: stretch/start/end/center;
+            Zachowanie dla poszczególnego elementu w pionie, po wysokości.
+        <span>place-self</span>: align-self justify-self;
+            Skrót zapisu, najpierw podajemy align-self, potem justify-self.
+        <span>order</span> - kolejność na warstwach, lub kolejność elementów.
+            Domyślnie: 0; jeżeli damy elementowi 1 to przeskoczy na koniec,
+            jeżeli damy elementowi -1 to przeszkoczy na początek
+            (ponieważ reszta elementów ma domyślnie 0).
+        <span>z-index</span> - standardowo, "podniesienie" lub "obniżenie" warstwy.
+
+        Inne:
+        <span>fr</span> - jednostka oznaczająca frakcję (część), dotyczy wolnej przestrzeni kontenera. 
+        <span>span</span> - wartość używana przy tworzeniu powierzchni dla elementu siatki np:
+                grid-column: 2/span 3;
+        <span>dense</span> - możemy użyć w grid-auto-flow. Wskazujemy, że jeśli istnieją wolne komórki
+                przed aktualnym elementem, Grid powinien umieścić w nich element.
+        <span>repeat()</span> - powtarzanie repeat(ile razy, co);
+                np: grid-template-columns: repeat(4, 1fr);
+        <span>minmax()</span> - określanie minimalnej i maksymalnej wielkości kolumny/wiersza
+                np: grid-template-columns: minimax(50px, 200px) 1fr 30%;
+        <span>auto-fit</span> - tworzy tyle kolumn ile elementów ma do dyspozycji.
+        <span>auto-fill</span> - tworzy maksymalną liczbę kolumn jaka jest możliwa.
+        <span>min-content</span> - minimalna przestrzeń jaką potrzebuje element.
+        <span>max-content</span> - maksymalna przestrzeń jaką można przypisać elementowi.
         </pre>
     </section>
 
